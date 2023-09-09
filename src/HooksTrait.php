@@ -36,7 +36,7 @@ trait HooksTrait {
      *
      * @return bool true
      */
-    protected function add_filter(string $hook, callable $method, int $priority = 10, int $arg_count = 1): bool {
+    protected function add_filter(string $hook, string $method, int $priority = 10, int $arg_count = 1): bool {
         return add_filter(
             $hook,
             $this->map_filter($this->get_wp_filter_id($hook, $method, $priority), $method, $arg_count),
@@ -52,7 +52,7 @@ trait HooksTrait {
      *
      * @return bool true
      */
-    protected function add_action(string $hook, callable $method, int $priority = 10, int $arg_count = 1): bool {
+    protected function add_action(string $hook, string $method, int $priority = 10, int $arg_count = 1): bool {
         return $this->add_filter($hook, $method, $priority, $arg_count);
     }
 
@@ -61,7 +61,7 @@ trait HooksTrait {
      *
      * @return bool whether the function existed before it was removed
      */
-    protected function remove_filter(string $hook, callable $method, int $priority = 10, int $arg_count = 1): bool {
+    protected function remove_filter(string $hook, string $method, int $priority = 10, int $arg_count = 1): bool {
         return remove_filter(
             $hook,
             $this->map_filter($this->get_wp_filter_id($hook, $method, $priority), $method, $arg_count),
@@ -76,7 +76,7 @@ trait HooksTrait {
      *
      * @return bool whether the function is removed
      */
-    protected function remove_action(string $hook, callable $method, int $priority = 10, int $arg_count = 1) {
+    protected function remove_action(string $hook, string $method, int $priority = 10, int $arg_count = 1) {
         return $this->remove_filter($hook, $method, $priority, $arg_count);
     }
 

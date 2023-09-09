@@ -26,7 +26,7 @@ final class PluginFactory {
         // Use the calling file as the main plugin file.
         if (empty($filename)) {
             $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1);
-            $filename = $backtrace[0]['file'];
+            $filename = $backtrace[0]['file'] ?? '';
         }
 
         return ( new Plugin() )
