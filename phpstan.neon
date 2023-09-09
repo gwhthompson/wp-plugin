@@ -3,6 +3,7 @@ parameters:
 	level: 5
 	paths:
 		- src
+		- rector.php
 	scanDirectories:
 		- vendor
 		
