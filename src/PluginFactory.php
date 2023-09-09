@@ -24,7 +24,7 @@ final class PluginFactory {
      */
     public static function create(string $slug, string $filename = ''): Plugin {
         // Use the calling file as the main plugin file.
-        if (empty($filename)) {
+        if ($filename === '') {
             $backtrace = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 1);
             $filename = $backtrace[0]['file'] ?? '';
         }

@@ -78,10 +78,6 @@ trait ContainerAwareTrait {
      * @throws \InvalidArgumentException when no container is provided that implements ContainerInterface
      */
     public function set_container(ContainerInterface $container): static {
-        if (!$container instanceof ContainerInterface) {
-            throw new \InvalidArgumentException('Expected a ContainerInterface.');
-        }
-
         $this->container = $container;
 
         return $this;

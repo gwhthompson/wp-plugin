@@ -23,10 +23,10 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::DEAD_CODE,
         SetList::EARLY_RETURN,
         SetList::NAMING,
-        SetList::PHP_80,
+        SetList::PHP_81,
         SetList::PRIVATIZATION,
         SetList::TYPE_DECLARATION,
-        LevelSetList::UP_TO_PHP_80,
+        LevelSetList::UP_TO_PHP_82,
     ]);
 
     $rectorConfig->autoloadPaths([
@@ -36,6 +36,6 @@ return static function (RectorConfig $rectorConfig): void {
         // __DIR__.'/project-without-composer',
     ]);
 
-    $rectorConfig->phpVersion(PhpVersion::PHP_80);
+    $rectorConfig->phpVersion(PhpVersion::PHP_82);
     $rectorConfig->phpstanConfig(__DIR__.'/phpstan.neon');
 };
