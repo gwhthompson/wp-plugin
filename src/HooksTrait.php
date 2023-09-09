@@ -119,7 +119,7 @@ trait HooksTrait {
 	 */
 	protected function map_filter( $id, $method, $arg_count ) {
 		if ( empty( $this->filter_map[ $id ] ) ) {
-			$this->filter_map[ $id ] = fn() => call_user_func_array( [ $this, $method ], array_slice( func_get_args(), 0, $arg_count ) );
+			$this->filter_map[ $id ] = fn(): mixed => call_user_func_array( [ $this, $method ], array_slice( func_get_args(), 0, $arg_count ) );
 		}
 
 		return $this->filter_map[ $id ];

@@ -167,17 +167,17 @@ abstract class AbstractPlugin implements PluginInterface {
 	}
 
 	/**
-	 * Register a hook provider.
-	 *
-	 * @param  HookProviderInterface $provider Hook provider.
-	 * @return $this
-	 */
-	public function register_hooks( HookProviderInterface $provider ) {
-		if ( $provider instanceof PluginAwareInterface ) {
-			$provider->set_plugin( $this );
+  * Register a hook provider.
+  *
+  * @param HookProviderInterface $hookProvider Hook provider.
+  * @return $this
+  */
+ public function register_hooks( HookProviderInterface $hookProvider ) {
+		if ( $hookProvider instanceof PluginAwareInterface ) {
+			$hookProvider->set_plugin( $this );
 		}
 
-		$provider->register_hooks();
+		$hookProvider->register_hooks();
 		return $this;
 	}
 }

@@ -14,7 +14,7 @@ namespace Cedaro\WP\Plugin;
  *
  * @package Cedaro\WP\Plugin
  */
-class PluginFactory {
+final class PluginFactory {
 	/**
 	 * Create a plugin instance.
 	 *

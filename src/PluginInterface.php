@@ -104,9 +104,9 @@ interface PluginInterface {
 	public function set_url( $url );
 
 	/**
-	 * Register hooks for the plugin.
-	 *
-	 * @param HookProviderInterface $provider Hook provider.
-	 */
-	public function register_hooks( HookProviderInterface $provider );
+  * Register hooks for the plugin.
+  *
+  * @param HookProviderInterface $hookProvider Hook provider.
+  */
+ public function register_hooks( HookProviderInterface $hookProvider );
 }

@@ -14,7 +14,7 @@ namespace Cedaro\WP\Plugin;
  *
  * @package Cedaro\WP\Plugin
  */
-class Plugin extends AbstractPlugin {
+final class Plugin extends AbstractPlugin {
 
 	use ContainerAwareTrait;
 }
